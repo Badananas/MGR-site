@@ -9,6 +9,9 @@
     background: #000;
     color: white;
 }
+body {
+    background-color: #000;
+}
 img {
     width: 100%;
     height: 100%;
@@ -16,6 +19,7 @@ img {
 video {
     width: 100%;
     height: 100%;
+    transition:  opacity 5s;
 }
 span , p , a {
     font-family: sans-serif;
@@ -45,6 +49,12 @@ section {
     height: 40px;
     border: 1px solid #30d5c8;
     background: rgba(0,0,0,0.8);
+    transition: 0.6;
+}
+.btn:hover {
+    border: 1px solid;
+    border-image: linear-gradient(90deg, rgba(0,255,235,1) 0%, rgba(255,0,0,1) 28%, rgba(255,0,0,1) 69%, rgba(0,255,244,1) 100%);
+    border-image-slice: 1;
 }
 
 
@@ -63,6 +73,7 @@ header {
 	background: rgba(0,0,0,0.7);
     font-family: sans-serif;
 	z-index: 1;
+    transform: translateY(-150px);
 }
 .header_logo {
     width: 18vw;
@@ -97,14 +108,16 @@ header > ul > li > a:hover {
 
 }
 .buybtn {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-	height: 100%;
+	height: 9vh;
+    min-height: 70px;
 	width: 10vw;
 	min-width: 75px;
 	background: -webkit-linear-gradient(90deg, #860404 0%, #c51212 100%);
-	font-size: 1.2vw;
+	font-size: 0.9vw;
 }
 
 
@@ -137,6 +150,9 @@ section {
     position: relative;
     width: 100%;
 }
+section span {
+    padding: 0px 10px;
+}
 .second , .third , .fourth {
     height: 100vh;
 }
@@ -167,10 +183,12 @@ section p, section span {
 .hh {
     position: absolute;
     width: 100%;
+    z-index: 4;
 }
 .underbar_black {
+    vertical-align: top;
     position: relative;
-    width: 28vw;
+    width: 0vw;
     top: 3.5vw;
     right: 1.5vw;
     z-index: 0;
@@ -178,15 +196,15 @@ section p, section span {
 }
 
 .underbar_red , .underbar_blue {
+    vertical-align: top;
     display: inline-block;
     position: relative;
-    width: 10vw;
+    width: 0vw;
     height: 2vw;
     right: 1.5vw;
     top: 2.5vw;    
 }
 .underbar_blue {
-    vertical-align: top;
     right: 3.5vw;
 }
 
@@ -196,7 +214,6 @@ section p, section span {
     z-index: 5;
     font-size: 7vw;
 	font-family: 'Cormorant Garamond', serif;
-	text-shadow: 100 0 166px #000;
 }
 .text_h , .hh {
     margin-left: -2vw;
@@ -285,6 +302,9 @@ section p, section span {
 .sec {
     width: 250px;
     height: 50px;
+    transition: 0.5;
+    opacity: 0;
+    transform: translateY(150px);
 }
 
 
@@ -296,9 +316,7 @@ section p, section span {
 
 /*section third*/
 
-.third .underbar_black {
-    width: 45vw;
-}
+
 .third .section_img {
     
     height: 100%;
@@ -420,4 +438,47 @@ footer p , footer a{
 .foot > .finaly {
 	color: #666;
 	padding-bottom: 5px;
+}
+
+
+
+
+
+
+header#start_anim {
+    transition: ease-out 0.5s;
+    transition-duration: 1s;
+}
+.raiden_img {
+    transform: translateX(3000px);
+}
+
+.test02 {
+    transform: translate(-150px, 0px);
+    opacity: 0;
+    
+}
+.underbar_black, .underbar_blue, .underbar_red {
+    width: 0vw;
+}
+.second .span_div, .second p, .third .span_div, .third p, .fourth .span_div, .fourth p {
+    opacity: 0;
+}
+.ub01#start_anim {
+    width: 27vw;
+}
+.ub02#start_anim {
+    width: 48vw;
+}
+.ub03#start_anim {
+    width: 32vw;
+}
+.underbar_red#start_anim , .underbar_blue#start_anim {
+    width: 10vw;
+    height: 2vw;
+}
+#start_anim {
+    transition: ease-out 0.5s;
+    transform: none;
+    opacity: 1;
 }

@@ -219,6 +219,10 @@ section {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    transition: ease-out 0.2s;
+}
+.six_btn:hover {
+    background-color: #f0f0f0;
 }
  
 
@@ -250,7 +254,51 @@ footer p {
     align-items: center;
     justify-content: center;
     margin: 0 0 50px;
+    transition: ease-out 0.2s;
+
+}
+.foot_btn:hover {
+    opacity: 0.7;
 }
 .ftext {
     margin: 10px 0 10px;
+}
+
+
+
+.fourth_img:nth-child(1) {
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+.fourth_img:nth-child(2) {
+    opacity: 0;
+    transition-delay: 0.6s;
+}
+.fourth_img:nth-child(3) {
+    opacity: 0;
+    transition-delay: 0.9s;
+}
+.fourth_img:nth-child(4) {
+    transition-delay: 0.12s;
+}
+.fourth_img:nth-child(5) {
+    opacity: 0;
+    transition-delay: 0.15s;
+}
+.fourth_img:nth-child(6) {
+    opacity: 0;
+    transition-delay: 0.18s;
+}
+
+.second_img.transform_anim {
+    transform: translateX(45px);
+}
+.second_text.transform_anim {
+    transform: translateX(-45px);
+}
+#start_anim {
+    transition: ease-out 0.5s;
+    transition-duration: 0.5s;
+    transform: none;
+    opacity: 1;
 }
